@@ -10,7 +10,7 @@
 		"prepare": "lefthook install",
 		"changeset": "changeset",
 		"version-packages": "changeset version",
-		"release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish --provenance"
+		"release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
