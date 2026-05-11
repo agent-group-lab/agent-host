@@ -56,10 +56,10 @@ importers:
   packages/agent-host:
     dependencies:
       '@agent-group-lab/contracts':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../contracts
       '@agent-group-lab/protocol':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../protocol
       nanoid:
         specifier: 5.1.11
@@ -75,16 +75,16 @@ importers:
   packages/agent-host-runtime-node:
     dependencies:
       '@agent-group-lab/agent-host':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../agent-host
       '@agent-group-lab/contracts':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../contracts
       '@agent-group-lab/protocol':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../protocol
       '@agent-group-lab/provider-adapter':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../provider-adapter
       nanoid:
         specifier: 5.1.11
@@ -115,7 +115,7 @@ importers:
   packages/provider-adapter:
     dependencies:
       '@agent-group-lab/contracts':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../contracts
       '@anthropic-ai/claude-agent-sdk':
         specifier: 0.2.138
