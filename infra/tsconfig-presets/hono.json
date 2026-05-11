@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"extends": "./base.json",
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "Bundler",
+		"lib": ["ESNext"],
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx"
+	}
+}

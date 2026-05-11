@@ -1,0 +1,51 @@
+{
+  "name": "@agent-group-lab/agent-host-runtime-node",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./client/uds": {
+      "types": "./dist/esm/client/uds/client-entry.d.ts",
+      "import": "./dist/esm/client/uds/client-entry.js",
+      "default": "./dist/esm/client/uds/client-entry.js"
+    },
+    "./client/websocket": {
+      "types": "./dist/esm/client/websocket/client-entry.d.ts",
+      "import": "./dist/esm/client/websocket/client-entry.js",
+      "default": "./dist/esm/client/websocket/client-entry.js"
+    },
+    "./host/uds": {
+      "types": "./dist/esm/host/uds/host-entry.d.ts",
+      "import": "./dist/esm/host/uds/host-entry.js",
+      "default": "./dist/esm/host/uds/host-entry.js"
+    },
+    "./worker/uds": {
+      "types": "./dist/esm/worker/uds/worker-entry.d.ts",
+      "import": "./dist/esm/worker/uds/worker-entry.js",
+      "default": "./dist/esm/worker/uds/worker-entry.js"
+    },
+    "./worker/websocket": {
+      "types": "./dist/esm/worker/websocket/worker-entry.d.ts",
+      "import": "./dist/esm/worker/websocket/worker-entry.js",
+      "default": "./dist/esm/worker/websocket/worker-entry.js"
+    }
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "dependencies": {
+    "@agent-group-lab/agent-host": "workspace:*",
+    "@agent-group-lab/contracts": "workspace:*",
+    "@agent-group-lab/protocol": "workspace:*",
+    "@agent-group-lab/provider-adapter": "workspace:*",
+    "zod": "4.4.3",
+    "nanoid": "5.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.2"
+  }
+}

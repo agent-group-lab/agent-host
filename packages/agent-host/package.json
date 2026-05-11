@@ -1,0 +1,39 @@
+{
+  "name": "@agent-group-lab/agent-host",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./host": {
+      "import": {
+        "types": "./dist/esm/host-entry.d.ts",
+        "default": "./dist/esm/host-entry.js"
+      }
+    },
+    "./worker": {
+      "import": {
+        "types": "./dist/esm/worker-entry.d.ts",
+        "default": "./dist/esm/worker-entry.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@agent-group-lab/contracts": "workspace:*",
+    "@agent-group-lab/protocol": "workspace:*",
+    "nanoid": "5.1.11",
+    "xstate": "5.31.0"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.2"
+  }
+}

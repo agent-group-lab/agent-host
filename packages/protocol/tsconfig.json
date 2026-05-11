@@ -1,0 +1,10 @@
+{
+	"extends": "@infra/tsconfig-presets/lib.esm.json",
+	"compilerOptions": {
+		"outDir": "./dist/esm",
+		"paths": {
+			"~/*": ["./src/*"]
+		}
+	},
+	"include": ["src"]
+}

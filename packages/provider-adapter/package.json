@@ -1,0 +1,46 @@
+{
+  "name": "@agent-group-lab/provider-adapter",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    },
+    "./codex": {
+      "import": {
+        "types": "./dist/esm/codex/index.d.ts",
+        "default": "./dist/esm/codex/index.js"
+      }
+    },
+    "./claude": {
+      "import": {
+        "types": "./dist/esm/claude/index.d.ts",
+        "default": "./dist/esm/claude/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.2.138",
+    "@cfworker/json-schema": "4.1.1",
+    "@modelcontextprotocol/server": "2.0.0-alpha.2",
+    "@modelcontextprotocol/node": "2.0.0-alpha.2",
+    "@openai/codex-sdk": "0.116.0",
+    "@agent-group-lab/contracts": "workspace:*",
+    "nanoid": "5.1.11",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "25.6.2"
+  }
+}

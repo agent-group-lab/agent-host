@@ -1,0 +1,14 @@
+{
+	"name": "@infra/dep-presets",
+	"version": "1.0.0",
+	"main": "./default.mjs",
+	"scripts": {
+		"clean": "rimraf node_modules"
+	},
+	"files": [
+		"default.mjs"
+	],
+	"devDependencies": {
+		"lodash.merge": "4.6.2"
+	}
+}

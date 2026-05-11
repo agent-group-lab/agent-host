@@ -1,0 +1,152 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+dist
+tmp
+/out-tsc
+
+# dependencies
+node_modules
+miniprogram_npm
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Claude Code - local settings (user-specific)
+.claude/settings.local.json
+
+.nx/cache
+.nx/workspace-data
+
+temp
+
+app/*/coverage
+common/*/coverage
+
+common/*/es
+
+__pycache__
+app.egg-info
+*.pyc
+.mypy_cache
+.coverage
+htmlcov
+.cache
+.venv
+.env
+openapi.json
+
+/logs
+
+# wrangler files
+.wrangler
+.env
+.env.local
+.env.production
+.env.staging
+.dev.vars
+
+log
+
+.pytest_cache
+.swc
+
+# Bundle artifact
+*.jsbundle
+
+# Ruby / CocoaPods
+**/Pods/
+**/.vendor/bundle/
+
+# Xcode
+**/ios/app/build
+**/ios/build
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+**/.xcode.env.local
+
+# Android/IntelliJ
+**/android/app/build
+**/android/build
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+.kotlin/
+
+# React Native - Signing & Certificates
+# CRITICAL: These files contain signing keys and MUST NEVER be in version control
+*.jks
+*.p12
+*.mobileprovision
+*.certSigningRequest
+
+# React Native - Sentry
+.sentryclirc
+sentry.properties
+
+# React Native - Metro
+.metro-health-check*
+
+#cf -Sentry
+.env.sentry-build-plugin
+
+# React Native - Native Debug Symbols
+*.dSYM.zip
+*.dSYM
+
+# React Native - Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# React Native - Expo
+.expo
+.expo-shared
+
+.astro/
+dist-types

@@ -1,0 +1,28 @@
+{
+  "name": "@agent-group-lab/protocol",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "dependencies": {
+    "zod": "4.4.3",
+    "nanoid": "5.1.11"
+  }
+}

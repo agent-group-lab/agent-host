@@ -1,0 +1,48 @@
+{
+  "name": "@agent-group-lab/contracts",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./agent": {
+      "import": {
+        "types": "./dist/esm/agent/index.d.ts",
+        "default": "./dist/esm/agent/index.js"
+      }
+    },
+    "./work": {
+      "import": {
+        "types": "./dist/esm/work/index.d.ts",
+        "default": "./dist/esm/work/index.js"
+      }
+    },
+    "./events": {
+      "import": {
+        "types": "./dist/esm/events/index.d.ts",
+        "default": "./dist/esm/events/index.js"
+      }
+    },
+    "./timeline": {
+      "import": {
+        "types": "./dist/esm/timeline/index.d.ts",
+        "default": "./dist/esm/timeline/index.js"
+      }
+    },
+    "./messages": {
+      "import": {
+        "types": "./dist/esm/messages/index.d.ts",
+        "default": "./dist/esm/messages/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "clean": "rimraf ./node_modules dist",
+    "check:test": "vitest --watch=false",
+    "check:lint": "biome check --write",
+    "check:type": "tsc -p ./tsconfig.json --noEmit",
+    "check:dep": "depcruise --config .dependency-cruiser.mjs src"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}

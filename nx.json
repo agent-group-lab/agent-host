@@ -1,0 +1,56 @@
+{
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"cacheDirectory": "node_modules/.nx",
+	"neverConnectToCloud": true,
+	"namedInputs": {
+		"default": ["{projectRoot}/**/*", "sharedGlobals"],
+		"production": [
+			"default",
+			"!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+			"!{projectRoot}/tsconfig.spec.json",
+			"!{projectRoot}/test-setup.[jt]s",
+			"!{projectRoot}/vitest.config.[jt]s",
+			"!{projectRoot}/biome.json",
+			"!{projectRoot}/dist/*",
+			"!{projectRoot}/es/*"
+		],
+		"test": [
+			"default",
+			"!{projectRoot}/biome.json",
+			"!{projectRoot}/dist/*",
+			"!{projectRoot}/es/*"
+		],
+		"sharedGlobals": []
+	},
+	"tui": {
+		"enabled": false
+	},
+	"targetDefaults": {
+		"build": {
+			"dependsOn": ["^build"],
+			"cache": true,
+			"inputs": ["production", "^production"],
+			"outputs": ["{projectRoot}/dist", "{projectRoot}/es"]
+		},
+		"start": {
+			"dependsOn": ["^build"],
+			"cache": false
+		},
+		"check:test": {
+			"dependsOn": ["^build"],
+			"cache": true,
+			"inputs": ["test"]
+		},
+		"check:type": {
+			"dependsOn": ["^check:type", "^build"],
+			"cache": true,
+			"inputs": ["production"]
+		},
+		"check:dep": {
+			"dependsOn": ["^build"],
+			"cache": true,
+			"inputs": ["production"]
+		}
+	},
+	"analytics": true
+}

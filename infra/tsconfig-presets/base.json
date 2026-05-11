@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"strict": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"isolatedModules": true,
+		"allowJs": false,
+		"skipLibCheck": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"composite": false
+	}
+}

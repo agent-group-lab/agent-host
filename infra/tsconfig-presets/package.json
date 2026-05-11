@@ -1,0 +1,11 @@
+{
+	"name": "@infra/tsconfig-presets",
+	"version": "1.0.0",
+	"description": "Shared TypeScript configurations (tsconfig) for the monorepo.",
+	"files": [
+		"base.json",
+		"lib.cjs.json",
+		"lib.esm.json",
+		"nest.json"
+	]
+}

@@ -1,0 +1,9 @@
+packages:
+  - infra/tsconfig-presets
+  - infra/dep-presets
+  - packages/provider-adapter
+  - packages/contracts
+  - packages/protocol
+  - packages/agent-host
+  - packages/agent-host-runtime-node
+  - packages/agent-host-runtime-cf
