@@ -42,7 +42,13 @@
     "check:type": "tsc -p ./tsconfig.json --noEmit",
     "check:dep": "depcruise --config .dependency-cruiser.mjs src"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "zod": "4.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
