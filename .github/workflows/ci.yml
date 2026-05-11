@@ -22,7 +22,8 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm nx ncu @infra/toolkit
       - run: pnpm check:affected
-        if: github.head_ref != 'changeset-release/main'
+        if: github.head_ref != 'changeset-release/main' && !startsWith(github.head_ref, 'improvement-scheduled-ncu-update-')
       - run: pnpm changeset status --since=origin/main --verbose
-        if: github.head_ref != 'changeset-release/main'
+        if: github.head_ref != 'changeset-release/main' && !startsWith(github.head_ref, 'improvement-scheduled-ncu-update-')
