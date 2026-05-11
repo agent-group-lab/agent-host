@@ -1,11 +1,11 @@
 {
 	"$comment": "Use exact versions (no ^ or ~ prefixes). This configuration enforces consistent dependency versions across all workspace packages.",
 	"dependencies": {
-		"@agent-group-lab/agent-host": "workspace:^",
-		"@agent-group-lab/contracts": "workspace:^",
-		"@agent-group-lab/protocol": "workspace:^",
-		"@agent-group-lab/provider-adapter": "workspace:^",
-		"@agent-group-lab/agent-host-runtime-node": "workspace:^",
+		"@agent-group-lab/agent-host": "0.1.6",
+		"@agent-group-lab/contracts": "0.1.6",
+		"@agent-group-lab/protocol": "0.1.6",
+		"@agent-group-lab/provider-adapter": "0.1.6",
+		"@agent-group-lab/agent-host-runtime-node": "0.1.6",
 		"@agent-group-lab/agent-host-runtime-cf": "workspace:^",
 		"zod": "4.4.3",
 		"nanoid": "5.1.11",
@@ -13,15 +13,15 @@
 		"@cfworker/json-schema": "4.1.1",
 		"@modelcontextprotocol/server": "2.0.0-alpha.2",
 		"@modelcontextprotocol/node": "2.0.0-alpha.2",
-		"@openai/codex-sdk": "0.116.0",
-		"xstate": "5.31.0"
+		"@openai/codex-sdk": "0.130.0",
+		"xstate": "5.31.1"
 	},
 	"devDependencies": {
 		"@infra/toolkit": "workspace:*",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
 		"@types/node": "25.6.2",
-		"yaml": "2.8.4",
+		"yaml": "2.9.0",
 		"axios": "1.16.0",
 		"lodash.merge": "4.6.2",
 		"@biomejs/biome": "2.4.15",
@@ -33,6 +33,6 @@
 		"tsc-alias": "1.8.17",
 		"tsx": "4.21.0",
 		"typescript": "6.0.3",
-		"vitest": "4.1.5"
+		"vitest": "4.1.6"
 	}
 }
