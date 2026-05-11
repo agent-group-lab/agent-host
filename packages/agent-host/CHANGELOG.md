@@ -1,5 +1,14 @@
 # @agent-group-lab/agent-host
 
+## 0.1.5
+
+### Patch Changes
+
+- e13f50c: Release
+- Updated dependencies [e13f50c]
+  - @agent-group-lab/contracts@0.1.5
+  - @agent-group-lab/protocol@0.1.5
+
 ## 0.1.4
 
 ### Patch Changes
