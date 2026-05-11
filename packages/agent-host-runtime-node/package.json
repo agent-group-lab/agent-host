@@ -38,10 +38,10 @@
     "check:dep": "depcruise --config .dependency-cruiser.mjs src"
   },
   "dependencies": {
-    "@agent-group-lab/agent-host": "workspace:^",
-    "@agent-group-lab/contracts": "workspace:^",
-    "@agent-group-lab/protocol": "workspace:^",
-    "@agent-group-lab/provider-adapter": "workspace:^",
+    "@agent-group-lab/agent-host": "0.1.6",
+    "@agent-group-lab/contracts": "0.1.6",
+    "@agent-group-lab/protocol": "0.1.6",
+    "@agent-group-lab/provider-adapter": "0.1.6",
     "zod": "4.4.3",
     "nanoid": "5.1.11"
   },
