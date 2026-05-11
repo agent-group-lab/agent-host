@@ -12,10 +12,10 @@ async function autoUpdateNcu() {
 	const pcks = Array.from(
 		new Set([
 			...Object.entries(ncuJson.dependencies)
-				.filter(([_, version]) => version !== 'workspace:*')
+				.filter(([_, version]) => !version.startsWith('workspace:'))
 				.map((name) => name),
 			...Object.entries(ncuJson.devDependencies)
-				.filter(([_, version]) => version !== 'workspace:*')
+				.filter(([_, version]) => !version.startsWith('workspace:'))
 				.map((name) => name),
 		]),
 	);
