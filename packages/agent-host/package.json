@@ -36,6 +36,11 @@
   "devDependencies": {
     "@types/node": "25.6.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-group-lab/agent-host",
+    "directory": "packages/agent-host"
+  },
   "publishConfig": {
     "access": "public"
   }

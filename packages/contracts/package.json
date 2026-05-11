@@ -48,6 +48,11 @@
   "dependencies": {
     "zod": "4.4.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agent-group-lab/agent-host",
+    "directory": "packages/contracts"
+  },
   "publishConfig": {
     "access": "public"
   }
