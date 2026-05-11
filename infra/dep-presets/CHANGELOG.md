@@ -1,6 +1,6 @@
-# @agent-group-lab/protocol
+# @infra/dep-presets
 
-## 0.1.1
+## 1.0.1
 
 ### Patch Changes
 

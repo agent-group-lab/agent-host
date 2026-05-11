@@ -1,7 +1,7 @@
 {
 	"name": "@infra/dep-presets",
 	"private": true,
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "./default.mjs",
 	"scripts": {
 		"clean": "rimraf node_modules"
