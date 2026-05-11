@@ -1,12 +1,12 @@
 {
 	"$comment": "Use exact versions (no ^ or ~ prefixes). This configuration enforces consistent dependency versions across all workspace packages.",
 	"dependencies": {
-		"@agent-group-lab/agent-host": "workspace:*",
-		"@agent-group-lab/contracts": "workspace:*",
-		"@agent-group-lab/protocol": "workspace:*",
-		"@agent-group-lab/provider-adapter": "workspace:*",
-		"@agent-group-lab/agent-host-runtime-node": "workspace:*",
-		"@agent-group-lab/agent-host-runtime-cf": "workspace:*",
+		"@agent-group-lab/agent-host": "workspace:^",
+		"@agent-group-lab/contracts": "workspace:^",
+		"@agent-group-lab/protocol": "workspace:^",
+		"@agent-group-lab/provider-adapter": "workspace:^",
+		"@agent-group-lab/agent-host-runtime-node": "workspace:^",
+		"@agent-group-lab/agent-host-runtime-cf": "workspace:^",
 		"zod": "4.4.3",
 		"nanoid": "5.1.11",
 		"@anthropic-ai/claude-agent-sdk": "0.2.138",
