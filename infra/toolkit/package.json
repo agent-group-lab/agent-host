@@ -1,0 +1,17 @@
+{
+	"name": "@infra/toolkit",
+	"bin": {
+		"ncu": "./ncu.js"
+	},
+	"scripts": {
+		"clean": "rimraf ./node_modules",
+		"ncu": "node ncu.js",
+		"ncu:write": "node ncu.js --write",
+		"ncu:auto": "node ncu.js --write --auto",
+		"sync:context": "node ./sync-ai-context.mjs"
+	},
+	"devDependencies": {
+		"yaml": "2.8.4",
+		"axios": "1.16.0"
+	}
+}

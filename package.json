@@ -17,6 +17,7 @@
 		"@changesets/cli": "2.31.0",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
+		"@infra/toolkit": "workspace:*",
 		"dependency-cruiser": "17.4.0",
 		"lefthook": "2.1.6",
 		"nx": "22.7.1",
