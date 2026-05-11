@@ -1,6 +1,7 @@
 packages:
   - infra/tsconfig-presets
   - infra/dep-presets
+  - infra/toolkit
   - packages/provider-adapter
   - packages/contracts
   - packages/protocol
