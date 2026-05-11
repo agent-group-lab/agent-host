@@ -35,8 +35,8 @@
     "@cfworker/json-schema": "4.1.1",
     "@modelcontextprotocol/server": "2.0.0-alpha.2",
     "@modelcontextprotocol/node": "2.0.0-alpha.2",
-    "@openai/codex-sdk": "0.116.0",
-    "@agent-group-lab/contracts": "workspace:^",
+    "@openai/codex-sdk": "0.130.0",
+    "@agent-group-lab/contracts": "workspace:*",
     "nanoid": "5.1.11",
     "zod": "4.4.3"
   },

@@ -28,10 +28,10 @@
     "dist"
   ],
   "dependencies": {
-    "@agent-group-lab/contracts": "workspace:^",
-    "@agent-group-lab/protocol": "workspace:^",
+    "@agent-group-lab/contracts": "workspace:*",
+    "@agent-group-lab/protocol": "workspace:*",
     "nanoid": "5.1.11",
-    "xstate": "5.31.0"
+    "xstate": "5.31.1"
   },
   "devDependencies": {
     "@types/node": "25.6.2"
