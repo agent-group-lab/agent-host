@@ -1,5 +1,16 @@
 # @agent-group-lab/agent-host-runtime-node
 
+## 0.1.3
+
+### Patch Changes
+
+- c785a85: Release
+- Updated dependencies [c785a85]
+  - @agent-group-lab/agent-host@0.1.3
+  - @agent-group-lab/contracts@0.1.3
+  - @agent-group-lab/protocol@0.1.3
+  - @agent-group-lab/provider-adapter@0.1.3
+
 ## 0.1.2
 
 ### Patch Changes
