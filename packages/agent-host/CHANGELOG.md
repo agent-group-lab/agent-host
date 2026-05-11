@@ -1,5 +1,14 @@
 # @agent-group-lab/agent-host
 
+## 0.1.4
+
+### Patch Changes
+
+- 8121d36: Release
+- Updated dependencies [8121d36]
+  - @agent-group-lab/contracts@0.1.4
+  - @agent-group-lab/protocol@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes

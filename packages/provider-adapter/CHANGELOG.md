@@ -1,5 +1,13 @@
 # @agent-group-lab/provider-adapter
 
+## 0.1.4
+
+### Patch Changes
+
+- 8121d36: Release
+- Updated dependencies [8121d36]
+  - @agent-group-lab/contracts@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes
