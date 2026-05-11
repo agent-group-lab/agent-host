@@ -1,5 +1,11 @@
 # @agent-group-lab/contracts
 
+## 0.1.3
+
+### Patch Changes
+
+- c785a85: Release
+
 ## 0.1.2
 
 ### Patch Changes
