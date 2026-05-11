@@ -2,16 +2,19 @@
 	"name": "agent-host",
 	"private": true,
 	"scripts": {
-		"start": "NX_LOAD_DOT_ENV_FILES=false nx start",
 		"build": "NX_LOAD_DOT_ENV_FILES=false nx build",
 		"nx": "NX_LOAD_DOT_ENV_FILES=false nx",
 		"biome": "biome",
 		"clean": "nx reset && nx run-many --target=clean --all && rimraf .nx && rimraf node_modules",
 		"check:affected": "nx affected --targets=check:lint,check:test,check:type,check:dep,build --verbose",
-		"prepare": "lefthook install"
+		"prepare": "lefthook install",
+		"changeset": "changeset",
+		"version-packages": "changeset version",
+		"release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish -- --provenance"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.15",
+		"@changesets/cli": "2.31.0",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
 		"dependency-cruiser": "17.4.0",

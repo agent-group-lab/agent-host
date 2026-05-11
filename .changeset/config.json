@@ -1,0 +1,19 @@
+{
+	"$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+	"changelog": "@changesets/cli/changelog",
+	"commit": false,
+	"fixed": [
+		[
+			"@agent-group-lab/contracts",
+			"@agent-group-lab/protocol",
+			"@agent-group-lab/provider-adapter",
+			"@agent-group-lab/agent-host",
+			"@agent-group-lab/agent-host-runtime-node"
+		]
+	],
+	"linked": [],
+	"access": "public",
+	"baseBranch": "main",
+	"updateInternalDependencies": "patch",
+	"ignore": []
+}

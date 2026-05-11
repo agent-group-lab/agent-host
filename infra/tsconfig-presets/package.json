@@ -1,5 +1,6 @@
 {
 	"name": "@infra/tsconfig-presets",
+	"private": true,
 	"version": "1.0.0",
 	"description": "Shared TypeScript configurations (tsconfig) for the monorepo.",
 	"files": [

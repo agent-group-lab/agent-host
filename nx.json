@@ -1,6 +1,7 @@
 {
 	"$schema": "./node_modules/nx/schemas/nx-schema.json",
 	"cacheDirectory": "node_modules/.nx",
+	"defaultBase": "origin/main",
 	"neverConnectToCloud": true,
 	"namedInputs": {
 		"default": ["{projectRoot}/**/*", "sharedGlobals"],

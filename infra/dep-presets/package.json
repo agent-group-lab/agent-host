@@ -1,5 +1,6 @@
 {
 	"name": "@infra/dep-presets",
+	"private": true,
 	"version": "1.0.0",
 	"main": "./default.mjs",
 	"scripts": {
