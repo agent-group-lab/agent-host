@@ -8,7 +8,8 @@
 			"@agent-group-lab/protocol",
 			"@agent-group-lab/provider-adapter",
 			"@agent-group-lab/agent-host",
-			"@agent-group-lab/agent-host-runtime-node"
+			"@agent-group-lab/agent-host-runtime-node",
+			"@agent-group-lab/agent-session"
 		]
 	],
 	"linked": [],
