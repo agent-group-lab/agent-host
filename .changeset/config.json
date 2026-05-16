@@ -16,5 +16,5 @@
 	"access": "public",
 	"baseBranch": "main",
 	"updateInternalDependencies": "patch",
-	"ignore": ["@infra/tsconfig-presets", "@infra/dep-presets", "@infra/toolkit"]
+	"ignore": ["@infra/tsconfig-presets", "@infra/dep-presets"]
 }

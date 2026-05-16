@@ -1,4 +1,4 @@
-name: NCU
+name: Monosync
 
 on:
   workflow_dispatch:
@@ -8,41 +8,36 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  id-token: write
 
 jobs:
   create_mr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
           registry-url: https://registry.npmjs.org
-
-      - run: pnpm install --frozen-lockfile
-
-      - name: ncu
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: monosync
         run: |
-          pnpm nx ncu:auto @infra/toolkit
-          pnpm install --no-frozen-lockfile
-
+          pnpm run monosync:update
+          pnpm install --no-frozen-lockfile --ignore-scripts
       - name: Push changes to a new branch
         id: push-changes
         run: |
-          BRANCH_NAME="improvement-scheduled-ncu-update-$(date +'%Y%m%d')"
+          BRANCH_NAME="improvement-scheduled-monosync-update-$(date +'%Y%m%d')"
           git push origin HEAD:$BRANCH_NAME
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
-  
       - name: Create a pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GH_PAT }}
           branch: ${{ env.branch_name }}
-          title: "Scheduled NCU MR"
+          title: "Scheduled Monosync MR"
           body: "This is an automated pull request created by GitHub Actions."
           base: main # 目标分支
