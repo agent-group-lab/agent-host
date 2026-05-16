@@ -7,6 +7,7 @@
 		"@agent-group-lab/provider-adapter": "workspace:^",
 		"@agent-group-lab/agent-host-runtime-node": "workspace:^",
 		"@agent-group-lab/agent-host-runtime-cf": "workspace:^",
+		"string-width": "8.2.1",
 		"zod": "4.4.3",
 		"nanoid": "5.1.11",
 		"@anthropic-ai/claude-agent-sdk": "0.2.140",
@@ -33,6 +34,12 @@
 		"tsc-alias": "1.8.17",
 		"tsx": "4.21.0",
 		"typescript": "6.0.3",
-		"vitest": "4.1.6"
+		"vitest": "4.1.6",
+		"@types/react": "19.2.14",
+		"bun-types": "1.3.14",
+		"ink": "7.0.2",
+		"mobx": "6.15.3",
+		"mobx-react-lite": "4.1.1",
+		"react": "19.2.6"
 	}
 }

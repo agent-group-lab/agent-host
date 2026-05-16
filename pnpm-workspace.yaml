@@ -8,3 +8,4 @@ packages:
   - packages/agent-host
   - packages/agent-host-runtime-node
   - packages/agent-host-runtime-cf
+  - packages/agent-session

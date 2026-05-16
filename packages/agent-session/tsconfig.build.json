@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": false,
+    "noEmit": false
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "__tests__",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
+}

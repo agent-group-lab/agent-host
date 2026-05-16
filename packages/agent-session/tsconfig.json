@@ -1,0 +1,19 @@
+{
+  "extends": "@infra/tsconfig-presets/react.json",
+  "compilerOptions": {
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "types": [
+      "node",
+      "bun-types"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}

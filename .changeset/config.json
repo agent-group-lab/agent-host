@@ -7,6 +7,7 @@
 			"@agent-group-lab/contracts",
 			"@agent-group-lab/protocol",
 			"@agent-group-lab/provider-adapter",
+			"@agent-group-lab/session",
 			"@agent-group-lab/agent-host",
 			"@agent-group-lab/agent-host-runtime-node"
 		]
