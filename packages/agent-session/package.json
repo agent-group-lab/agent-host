@@ -1,6 +1,6 @@
 {
   "name": "@agent-group-lab/session",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "type": "module",
   "exports": {
     ".": {
