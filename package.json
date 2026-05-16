@@ -7,7 +7,7 @@
 		"changeset": "changeset",
 		"changeset:version": "changeset version",
 		"changeset:release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish",
-		"monosync": "monosync --write",
+		"monosync": "monosync",
 		"monosync:update": "monosync --auto --write",
 		"prepare": "lefthook install"
 	},
