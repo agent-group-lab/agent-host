@@ -6,8 +6,8 @@
 
 pre-commit:
   commands:
-    ncu:
-      run: pnpm exec ncu
+    monosync:
+      run: pnpm run monosync
     check:
       glob: "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
       run: pnpm exec biome check --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}

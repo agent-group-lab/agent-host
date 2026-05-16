@@ -2,22 +2,21 @@
 	"name": "agent-host",
 	"private": true,
 	"scripts": {
-		"build": "NX_LOAD_DOT_ENV_FILES=false nx build",
-		"nx": "NX_LOAD_DOT_ENV_FILES=false nx",
-		"biome": "biome",
 		"clean": "nx reset && nx run-many --target=clean --all && rimraf .nx && rimraf node_modules",
 		"check:affected": "nx affected --targets=check:lint,check:test,check:type,check:dep,build --verbose",
-		"prepare": "lefthook install",
 		"changeset": "changeset",
-		"version-packages": "changeset version",
-		"release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish"
+		"changeset:version": "changeset version",
+		"changeset:release": "pnpm nx run-many -t build --skip-nx-cache && changeset publish",
+		"monosync": "monosync --write",
+		"monosync:update": "monosync --auto --write",
+		"prepare": "lefthook install"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.15",
-		"@changesets/cli": "2.31.0",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
-		"@infra/toolkit": "workspace:*",
+		"@biomejs/biome": "2.4.15",
+		"@changesets/cli": "2.31.0",
+		"@stackory/monosync": "1.0.0",
 		"dependency-cruiser": "17.4.0",
 		"lefthook": "2.1.6",
 		"nx": "22.7.1",
@@ -30,5 +29,5 @@
 	"engines": {
 		"node": ">=24.0.0 <25.0.0"
 	},
-	"packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
+	"packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
 }

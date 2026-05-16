@@ -1,7 +1,6 @@
 packages:
   - infra/tsconfig-presets
   - infra/dep-presets
-  - infra/toolkit
   - packages/provider-adapter
   - packages/contracts
   - packages/protocol
@@ -9,3 +8,7 @@ packages:
   - packages/agent-host-runtime-node
   - packages/agent-host-runtime-cf
   - packages/agent-session
+allowBuilds:
+  esbuild: false
+  lefthook: false
+  nx: false

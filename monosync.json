@@ -18,9 +18,9 @@
 		"xstate": "5.31.1"
 	},
 	"devDependencies": {
-		"@infra/toolkit": "workspace:*",
 		"@infra/dep-presets": "workspace:*",
 		"@infra/tsconfig-presets": "workspace:*",
+		"@stackory/monosync": "1.0.0",
 		"@types/node": "25.7.0",
 		"yaml": "2.9.0",
 		"axios": "1.16.0",
