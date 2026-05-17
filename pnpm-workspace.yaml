@@ -8,6 +8,7 @@ packages:
   - packages/agent-host-runtime-node
   - packages/agent-host-runtime-cf
   - packages/agent-session
+  - packages/tui
 allowBuilds:
   esbuild: false
   lefthook: false

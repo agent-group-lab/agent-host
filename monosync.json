@@ -7,6 +7,11 @@
 		"@agent-group-lab/provider-adapter": "workspace:^",
 		"@agent-group-lab/agent-host-runtime-node": "workspace:^",
 		"@agent-group-lab/agent-host-runtime-cf": "workspace:^",
+		"@agent-group-lab/session": "workspace:^",
+		"ink": "7.0.2",
+		"mobx": "6.15.3",
+		"mobx-react-lite": "4.1.1",
+		"react": "19.2.6",
 		"string-width": "8.2.1",
 		"zod": "4.4.3",
 		"nanoid": "5.1.11",
@@ -15,7 +20,9 @@
 		"@modelcontextprotocol/server": "2.0.0-alpha.2",
 		"@modelcontextprotocol/node": "2.0.0-alpha.2",
 		"@openai/codex-sdk": "0.130.0",
-		"xstate": "5.31.1"
+		"react-devtools-core": "7.0.1",
+		"xstate": "5.31.1",
+		"ws": "8.20.1"
 	},
 	"devDependencies": {
 		"@infra/dep-presets": "workspace:*",
@@ -40,6 +47,7 @@
 		"ink": "7.0.2",
 		"mobx": "6.15.3",
 		"mobx-react-lite": "4.1.1",
-		"react": "19.2.6"
+		"react": "19.2.6",
+		"@types/ws": "8.18.1"
 	}
 }
