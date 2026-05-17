@@ -1,0 +1,7 @@
+{
+  "extends": "@infra/tsconfig-presets/react.json",
+  "compilerOptions": {
+    "types": ["node", "bun-types"]
+  },
+  "include": ["scripts", "src"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@agent-group-lab/tui",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "agt-session": "./dist/tui.js"
+  },
+  "scripts": {
+    "start": "bun run ./src/main.tsx",
+    "clean": "rimraf ./node_modules dist",
+    "bundle": "rimraf ./dist && bun run ./scripts/bundle.ts",
+    "check:type": "tsc -p ./tsconfig.json --noEmit",
+    "check:lint": "biome check --write"
+  },
+  "dependencies": {
+    "@agent-group-lab/session": "workspace:^",
+    "ink": "7.0.2",
+    "react-devtools-core": "7.0.1",
+    "react": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "25.7.0",
+    "@types/react": "19.2.14",
+    "bun-types": "1.3.14"
+  }
+}
