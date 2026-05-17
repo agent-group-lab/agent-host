@@ -37,6 +37,8 @@
   "scripts": {
     "build": "rimraf ./dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "clean": "rimraf ./node_modules dist",
+    "host:uds": "tsx src/host/uds/host-cli.ts",
+    "host:ws": "tsx src/host/websocket/host-cli.ts",
     "check:test": "vitest --watch=false",
     "check:lint": "biome check --write",
     "check:type": "tsc -p ./tsconfig.json --noEmit",

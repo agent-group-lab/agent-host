@@ -9,6 +9,7 @@ type IProps = {
 	store: SessionStore<ISessionAgent>;
 	onSubmit: (prompt: string) => Promise<void>;
 	onCancel: () => void;
+	onExit?: () => void | Promise<void>;
 	onError?: (err: Error) => void;
 	placeholder?: string;
 };
@@ -17,6 +18,7 @@ export const SessionInputBar = observer(function SessionInputBar({
 	store,
 	onSubmit,
 	onCancel,
+	onExit,
 	onError,
 	placeholder = 'Message agent…',
 }: IProps) {
@@ -24,7 +26,11 @@ export const SessionInputBar = observer(function SessionInputBar({
 		onSubmit,
 	});
 
-	useInput((_input, key) => {
+	useInput((input, key) => {
+		if (key.ctrl && input === 'c') {
+			onExit?.();
+			return;
+		}
 		if (key.escape && store.isProcessing) {
 			onCancel();
 		}

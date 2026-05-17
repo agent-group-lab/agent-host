@@ -12,11 +12,12 @@ import { render } from 'ink';
 import React from 'react';
 import { App } from './app';
 
+const defaultConnect = '/tmp/swarm-host.sock';
+
 const { values } = parseArgs({
 	args: Bun.argv.slice(2),
 	options: {
-		ws: { type: 'string' },
-		uds: { type: 'string' },
+		connect: { type: 'string', default: defaultConnect },
 		name: { type: 'string' },
 		adapter: { type: 'string' },
 		db: { type: 'string' },
@@ -24,14 +25,19 @@ const { values } = parseArgs({
 	strict: true,
 });
 
-const endpointCount = Number(Boolean(values.ws)) + Number(Boolean(values.uds));
-
-if (endpointCount !== 1 || !values.name || !values.adapter) {
+if (!values.connect || !values.name || !values.adapter) {
 	console.error(
-		'Usage: agt-session (--ws <url> | --uds <socketPath>) --name <name> --adapter <id> [--db <path>]',
+		'Usage: agt-session [--connect <endpoint>] --name <name> --adapter <id> [--db <path>]',
 	);
 	process.exit(1);
 }
+
+const createSessionPort = (connect: string) => {
+	if (connect.startsWith('ws://') || connect.startsWith('wss://')) {
+		return new WebSocketSessionPort(connect);
+	}
+	return new UdsSessionPort(connect);
+};
 
 const agentId = createHash('sha256')
 	.update(values.name)
@@ -45,9 +51,7 @@ const historyService = values.db
 const store = new SessionStore({
 	mode: 'lead',
 	workingDirectory: process.cwd(),
-	port: values.uds
-		? new UdsSessionPort(values.uds)
-		: new WebSocketSessionPort(values.ws as string),
+	port: createSessionPort(values.connect),
 	historyService,
 	onError: (_kind, error) => {
 		// surface via store.error → status bar
@@ -62,17 +66,33 @@ store.start(
 	{ sessionId: agentId },
 );
 
-const { unmount } = render(
+let unmount = () => {};
+let isExiting = false;
+const exit = async () => {
+	if (isExiting) {
+		return;
+	}
+	isExiting = true;
+	await store.stop();
+	unmount();
+	process.exit(0);
+};
+
+const rendered = render(
 	React.createElement(App, {
+		onExit: exit,
 		store,
 	}),
 	{
 		exitOnCtrlC: false,
 	},
 );
+unmount = rendered.unmount;
 
 process.on('SIGINT', async () => {
-	await store.stop();
-	unmount();
-	process.exit(0);
+	await exit();
+});
+
+process.on('SIGTERM', async () => {
+	await exit();
 });

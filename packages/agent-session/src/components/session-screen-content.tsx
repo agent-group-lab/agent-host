@@ -11,6 +11,7 @@ type IProps = {
 	store: SessionStore<ISessionAgent>;
 	onSubmit: (prompt: string) => Promise<void>;
 	onCancel: () => void;
+	onExit?: () => void | Promise<void>;
 	onError?: (err: Error) => void;
 	inputPlaceholder?: string;
 };
@@ -19,6 +20,7 @@ export const SessionScreenContent = observer(function SessionScreenContent({
 	store,
 	onSubmit,
 	onCancel,
+	onExit,
 	onError,
 	inputPlaceholder,
 }: IProps) {
@@ -40,6 +42,7 @@ export const SessionScreenContent = observer(function SessionScreenContent({
 			<SessionInputBar
 				onCancel={onCancel}
 				onError={onError}
+				onExit={onExit}
 				onSubmit={onSubmit}
 				placeholder={inputPlaceholder}
 				store={store}

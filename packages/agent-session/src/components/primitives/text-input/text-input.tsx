@@ -179,10 +179,12 @@ export const TextInput = ({
 				return true;
 			}
 
-			// 3. Ctrl+C — abort BPM parser; clear value and blocks
-			if (key.ctrl && input === 'c' && valueRef.current) {
-				clearAll();
-				return true;
+			// 3. Ctrl+C — bubble to parent container for app-level exit.
+			if (key.ctrl && input === 'c') {
+				if (valueRef.current) {
+					clearAll();
+				}
+				return false;
 			}
 
 			// 4. Multiline newline sequences

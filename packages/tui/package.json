@@ -2,11 +2,7 @@
   "name": "@agent-group-lab/tui",
   "version": "0.1.0",
   "type": "module",
-  "bin": {
-    "agt-session": "./dist/tui.js"
-  },
   "scripts": {
-    "start": "bun run ./src/main.tsx",
     "clean": "rimraf ./node_modules dist",
     "bundle": "rimraf ./dist && bun run ./scripts/bundle.ts",
     "check:type": "tsc -p ./tsconfig.json --noEmit",
