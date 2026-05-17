@@ -2,6 +2,7 @@
   "name": "@agent-group-lab/tui",
   "version": "0.1.0",
   "type": "module",
+  "private": "true",
   "scripts": {
     "clean": "rimraf ./node_modules dist",
     "bundle": "rimraf ./dist && bun run ./scripts/bundle.ts",
@@ -18,5 +19,17 @@
     "@types/node": "25.7.0",
     "@types/react": "19.2.14",
     "bun-types": "1.3.14"
+  },
+  "nx": {
+    "targets": {
+      "bundle": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "{projectRoot}/dist/tui"
+        ]
+      }
+    }
   }
 }

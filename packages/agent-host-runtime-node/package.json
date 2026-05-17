@@ -67,5 +67,19 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "nx": {
+    "targets": {
+      "host:uds": {
+        "dependsOn": [
+          "build"
+        ]
+      },
+      "host:ws": {
+        "dependsOn": [
+          "build"
+        ]
+      }
+    }
   }
 }
