@@ -28,6 +28,7 @@ export type {
 	ISessionStatus,
 	ISessionWorkerMode,
 } from './contracts/status.contract';
+export { UdsSessionPort } from './ports/uds.port';
 export { WebSocketSessionPort } from './ports/websocket.port';
 export type { ISessionStoreOptions } from './store/session.store';
 export { SessionStore } from './store/session.store';

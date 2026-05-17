@@ -18,6 +18,11 @@
       "import": "./dist/esm/host/uds/host-entry.js",
       "default": "./dist/esm/host/uds/host-entry.js"
     },
+    "./host/websocket": {
+      "types": "./dist/esm/host/websocket/host-entry.d.ts",
+      "import": "./dist/esm/host/websocket/host-entry.js",
+      "default": "./dist/esm/host/websocket/host-entry.js"
+    },
     "./worker/uds": {
       "types": "./dist/esm/worker/uds/worker-entry.d.ts",
       "import": "./dist/esm/worker/uds/worker-entry.js",
@@ -42,14 +47,16 @@
     "@agent-group-lab/contracts": "workspace:^",
     "@agent-group-lab/protocol": "workspace:^",
     "@agent-group-lab/provider-adapter": "workspace:^",
-    "zod": "4.4.3",
-    "nanoid": "5.1.11"
+    "nanoid": "5.1.11",
+    "ws": "8.20.1",
+    "zod": "4.4.3"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "25.7.0"
+    "@types/node": "25.7.0",
+    "@types/ws": "8.18.1"
   },
   "repository": {
     "type": "git",

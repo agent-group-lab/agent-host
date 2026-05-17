@@ -21,7 +21,8 @@
 		"@modelcontextprotocol/node": "2.0.0-alpha.2",
 		"@openai/codex-sdk": "0.130.0",
 		"react-devtools-core": "7.0.1",
-		"xstate": "5.31.1"
+		"xstate": "5.31.1",
+		"ws": "8.20.1"
 	},
 	"devDependencies": {
 		"@infra/dep-presets": "workspace:*",
@@ -46,6 +47,7 @@
 		"ink": "7.0.2",
 		"mobx": "6.15.3",
 		"mobx-react-lite": "4.1.1",
-		"react": "19.2.6"
+		"react": "19.2.6",
+		"@types/ws": "8.18.1"
 	}
 }

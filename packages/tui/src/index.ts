@@ -5,6 +5,7 @@ import { parseArgs } from 'node:util';
 import {
 	BunSQLiteHistoryAdapter,
 	SessionStore,
+	UdsSessionPort,
 	WebSocketSessionPort,
 } from '@agent-group-lab/session';
 import { render } from 'ink';
@@ -15,6 +16,7 @@ const { values } = parseArgs({
 	args: Bun.argv.slice(2),
 	options: {
 		ws: { type: 'string' },
+		uds: { type: 'string' },
 		name: { type: 'string' },
 		adapter: { type: 'string' },
 		db: { type: 'string' },
@@ -22,9 +24,11 @@ const { values } = parseArgs({
 	strict: true,
 });
 
-if (!values.ws || !values.name || !values.adapter) {
+const endpointCount = Number(Boolean(values.ws)) + Number(Boolean(values.uds));
+
+if (endpointCount !== 1 || !values.name || !values.adapter) {
 	console.error(
-		'Usage: agt-session --ws <url> --name <name> --adapter <id> [--db <path>]',
+		'Usage: agt-session (--ws <url> | --uds <socketPath>) --name <name> --adapter <id> [--db <path>]',
 	);
 	process.exit(1);
 }
@@ -41,7 +45,9 @@ const historyService = values.db
 const store = new SessionStore({
 	mode: 'lead',
 	workingDirectory: process.cwd(),
-	port: new WebSocketSessionPort(values.ws),
+	port: values.uds
+		? new UdsSessionPort(values.uds)
+		: new WebSocketSessionPort(values.ws as string),
 	historyService,
 	onError: (_kind, error) => {
 		// surface via store.error → status bar
