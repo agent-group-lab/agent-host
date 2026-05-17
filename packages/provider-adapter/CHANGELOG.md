@@ -1,5 +1,15 @@
 # @agent-group-lab/provider-adapter
 
+## 1.1.0
+
+### Minor Changes
+
+- cc9431a: Added TUI support.
+
+### Patch Changes
+
+- @agent-group-lab/contracts@1.1.0
+
 ## 1.0.1
 
 ### Patch Changes
