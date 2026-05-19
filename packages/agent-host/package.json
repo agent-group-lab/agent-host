@@ -34,7 +34,7 @@
     "xstate": "5.31.1"
   },
   "devDependencies": {
-    "@types/node": "25.7.0"
+    "@types/node": "25.9.0"
   },
   "repository": {
     "type": "git",
