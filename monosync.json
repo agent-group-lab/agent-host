@@ -1,5 +1,8 @@
 {
 	"$comment": "Use exact versions (no ^ or ~ prefixes). This configuration enforces consistent dependency versions across all workspace packages.",
+	"config": {
+		"minAgeDays": 7
+	},
 	"dependencies": {
 		"@agent-group-lab/agent-host": "workspace:^",
 		"@agent-group-lab/contracts": "workspace:^",
