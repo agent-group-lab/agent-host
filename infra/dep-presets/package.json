@@ -1,15 +1,15 @@
 {
-	"name": "@infra/dep-presets",
-	"private": true,
-	"version": "1.0.1",
-	"main": "./default.mjs",
-	"scripts": {
-		"clean": "rimraf node_modules"
-	},
-	"files": [
-		"default.mjs"
-	],
-	"devDependencies": {
-		"lodash.merge": "4.6.2"
-	}
+  "name": "@infra/dep-presets",
+  "private": true,
+  "version": "1.0.1",
+  "main": "./default.mjs",
+  "scripts": {
+    "clean": "rimraf node_modules"
+  },
+  "files": [
+    "default.mjs"
+  ],
+  "devDependencies": {
+    "lodash.merge": "4.6.2"
+  }
 }
