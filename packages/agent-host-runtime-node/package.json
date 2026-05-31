@@ -50,14 +50,14 @@
     "@agent-group-lab/protocol": "workspace:^",
     "@agent-group-lab/provider-adapter": "workspace:^",
     "nanoid": "5.1.11",
-    "ws": "8.20.1",
+    "ws": "8.21.0",
     "zod": "4.4.3"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "25.8.0",
+    "@types/node": "25.9.1",
     "@types/ws": "8.18.1"
   },
   "repository": {
