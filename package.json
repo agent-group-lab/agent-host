@@ -16,7 +16,7 @@
     "@infra/tsconfig-presets": "workspace:*",
     "@biomejs/biome": "2.4.16",
     "@changesets/cli": "2.31.0",
-    "@stackory/monosync": "1.2.0",
+    "@stackory/monosync": "1.2.1",
     "dependency-cruiser": "17.4.3",
     "lefthook": "2.1.9",
     "nx": "22.7.5",
