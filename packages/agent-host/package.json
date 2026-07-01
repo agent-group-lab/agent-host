@@ -30,11 +30,11 @@
   "dependencies": {
     "@agent-group-lab/contracts": "workspace:^",
     "@agent-group-lab/protocol": "workspace:^",
-    "nanoid": "5.1.11",
-    "xstate": "5.32.1"
+    "nanoid": "5.1.15",
+    "xstate": "5.32.2"
   },
   "devDependencies": {
-    "@types/node": "25.9.3"
+    "@types/node": "26.0.0"
   },
   "repository": {
     "type": "git",
