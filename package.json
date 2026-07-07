@@ -17,7 +17,7 @@
     "@biomejs/biome": "2.5.1",
     "@changesets/cli": "2.31.0",
     "@stackory/monosync": "1.2.3",
-    "dependency-cruiser": "17.4.3",
+    "dependency-cruiser": "18.0.0",
     "lefthook": "2.1.9",
     "nx": "23.0.1",
     "rimraf": "6.1.3",
