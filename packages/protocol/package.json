@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "zod": "4.4.3",
-    "nanoid": "5.1.15"
+    "nanoid": "5.1.16"
   },
   "repository": {
     "type": "git",

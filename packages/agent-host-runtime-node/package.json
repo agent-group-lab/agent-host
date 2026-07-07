@@ -49,7 +49,7 @@
     "@agent-group-lab/contracts": "workspace:^",
     "@agent-group-lab/protocol": "workspace:^",
     "@agent-group-lab/provider-adapter": "workspace:^",
-    "nanoid": "5.1.15",
+    "nanoid": "5.1.16",
     "ws": "8.21.0",
     "zod": "4.4.3"
   },
@@ -57,7 +57,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "26.0.0",
+    "@types/node": "26.0.1",
     "@types/ws": "8.18.1"
   },
   "repository": {
