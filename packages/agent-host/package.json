@@ -31,10 +31,10 @@
     "@agent-group-lab/contracts": "workspace:^",
     "@agent-group-lab/protocol": "workspace:^",
     "nanoid": "5.1.16",
-    "xstate": "5.32.2"
+    "xstate": "5.32.4"
   },
   "devDependencies": {
-    "@types/node": "26.0.1"
+    "@types/node": "26.1.0"
   },
   "repository": {
     "type": "git",
