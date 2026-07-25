@@ -21,7 +21,7 @@
   "dependencies": {
     "@agent-group-lab/agent-host-runtime-node": "workspace:^",
     "@agent-group-lab/contracts": "workspace:^",
-    "string-width": "8.2.1",
+    "string-width": "8.2.2",
     "zod": "4.4.3"
   },
   "peerDependencies": {
@@ -31,10 +31,10 @@
     "react": ">=19.0.0"
   },
   "devDependencies": {
-    "@types/node": "26.1.0",
+    "@types/node": "26.1.1",
     "@types/react": "19.2.17",
     "bun-types": "1.3.14",
-    "ink": "7.1.0",
+    "ink": "7.1.1",
     "mobx": "6.16.1",
     "mobx-react-lite": "4.1.1",
     "react": "19.2.7"

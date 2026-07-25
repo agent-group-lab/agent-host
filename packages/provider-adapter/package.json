@@ -31,20 +31,20 @@
     "check:dep": "depcruise --config .dependency-cruiser.mjs src"
   },
   "dependencies": {
-    "@anthropic-ai/claude-agent-sdk": "0.3.201",
+    "@anthropic-ai/claude-agent-sdk": "0.3.214",
     "@cfworker/json-schema": "4.1.1",
     "@modelcontextprotocol/server": "2.0.0-alpha.2",
     "@modelcontextprotocol/node": "2.0.0-alpha.2",
-    "@openai/codex-sdk": "0.142.5",
+    "@openai/codex-sdk": "0.144.5",
     "@agent-group-lab/contracts": "workspace:^",
-    "nanoid": "5.1.16",
+    "nanoid": "6.0.0",
     "zod": "4.4.3"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
-    "@types/node": "26.1.0"
+    "@types/node": "26.1.1"
   },
   "repository": {
     "type": "git",
